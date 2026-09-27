@@ -33,11 +33,17 @@
             
         }
         .escudos {
-            max-width: 100px;
+            max-width: 50px;
             object-fit: cover;
         }
         .width100per {
             width: 100%
+        }
+
+        .video {
+            width: 80px;
+            height: 50px;
+            border-radius: 20px
         }
     </style>
 </head>
@@ -66,7 +72,7 @@
             <tr>
                 <td>
                     <div class="flex">
-                        <div class="flex">
+                        <div class="flex flex-directionColumn">
                             <div class="flex">
                                 <div class="flex">
                                     <div class="escudos">
@@ -80,8 +86,8 @@
                                     <p><?php echo $resultadoLocal?></p>
                                 </div>
                             </div>
-                            <div>
-                                <div>
+                            <div class="flex">
+                                <div class="flex">
                                     <div class="escudos">
                                         <img class="width100per" src="<?php echo $imagenEscudoVisitante ?>" alt="Equipo local">
                                     </div>
@@ -94,13 +100,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div>
+                        <div class="flex flex-directionColumn aling-itemCenter">
                             <div>
                                 <p>Fin</p>
                                 <p>6/9</p>
                             </div>
                             <div>
-                               <iframe src="https://www.youtube.com/embed/HqptBA55sUA" frameborder="0"></iframe> 
+                               <iframe class="video" src="https://www.youtube.com/embed/HqptBA55sUA" frameborder="0"></iframe> 
                             </div>
                         </div>
                     </div>
