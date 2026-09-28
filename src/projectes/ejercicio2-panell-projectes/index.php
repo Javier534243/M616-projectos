@@ -16,6 +16,11 @@
             border-radius: 20px;
             padding: 20px;
         }
+
+        .contenidoAbajo {
+            display: flex;
+            gap: 30px;
+        }
     </style>
 </head>
 <body>
@@ -27,10 +32,13 @@
         $tecnologias = ["HTML","CSS","PHP","Docker","WordPress","Spopify"];
     
         ?>
+    
+    <h2>Pojectos activos</h2>
+    <p>Lista de projectos del curso. Cada targeta mostra la informacion principal y la seva prioridad.</p>
 
     <div class="contendorPadre">
     <?php for($i = 0; $i <= 7;$i++): ?>
-        <?= '<div class="contenedor"><div>'.$nombreProjecto[$i].'</div><div>'.$tipoProjecto[$i].'</div><div>'.$horesEstimades[$i].'</div><div>'.$prioridad[$i].'</div></div>'?>
+        <?= '<div class="contenedor"><div>'.$nombreProjecto[$i].'</div><div>Tipo: '.$tipoProjecto[$i].'</div><div class="contenidoAbajo"><div>'.$horesEstimades[$i].' h </div><div> Prioridad: '.$prioridad[$i].'/10</div></div></div>'?>
     <?php endfor; ?>
     </div>
 
