@@ -45,6 +45,19 @@
             height: 50px;
             border-radius: 20px
         }
+        .separador-secionVideo {
+            padding-left: 20px;
+            border-left: 2px solid #aaab
+        }
+        .padding-right-puntos {
+            padding-right: 50px
+        }
+        .justify-content-space-between {
+            justify-content: space-between
+        }
+        .width-equipos {
+            width: 200px
+        }
     </style>
 </head>
 <body class="flex aling-itemCenter justifyContentCenter">
@@ -73,7 +86,7 @@
                 <td>
                     <div class="flex">
                         <div class="flex flex-directionColumn">
-                            <div class="flex">
+                            <div class="flex justify-content-space-between width-equipos">
                                 <div class="flex">
                                     <div class="escudos">
                                         <img class="width100per" src="<?php echo $imagenEscudoLocal ?>" alt="Equipo local">
@@ -86,7 +99,7 @@
                                     <p><?php echo $resultadoLocal?></p>
                                 </div>
                             </div>
-                            <div class="flex">
+                            <div class="flex justify-content-space-between width-equipos">
                                 <div class="flex">
                                     <div class="escudos">
                                         <img class="width100per" src="<?php echo $imagenEscudoVisitante ?>" alt="Equipo local">
@@ -100,8 +113,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex flex-directionColumn aling-itemCenter">
-                            <div>
+                        <div class="flex flex-directionColumn aling-itemCenter separador-secionVideo">
+                            <div class="flex flex-directionColumn">
                                 <p>Fin</p>
                                 <p>6/9</p>
                             </div>
