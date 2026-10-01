@@ -6,9 +6,31 @@
     <title>Panell de projectes</title>
     <script src="https://kit.fontawesome.com/b51cd60f76.js" crossorigin="anonymous"></script>
     <style>
+        .margin-0 {
+            margin: 0;
+        }
+        .colorletrafloja {
+            color: #333;
+        }
+        .cuadradoAzul {
+            background-color: #48e;
+            color: #fff;
+            width: 30px;
+            height: 30px;
+            font-size: 1.5rem;
+        }
+        .cuadradoIconoPropieades {
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+
         .contendorPadre {
             display: flex;
             flex-wrap: wrap;
+            align-items: center;
             gap: 20px;
 
         }
@@ -18,8 +40,35 @@
             padding: 20px;
         }
 
+        .alinear {
+            display: flex;
+            align-items: center
+        }
+
+        .space-between {
+            justify-content: space-between;
+        }
+
+        .cuadrados-navegador {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            gap: 10px;
+            border-radius: 10px;
+        }
+
+        .cuadrados-navegador:hover {
+            color: #26f;
+            background-color: #abf8;
+        }
+
+        .gap-20px {
+            gap: 20px;
+        }
+
         .contenidoAbajo {
             display: flex;
+            align-items: center;
             gap: 30px;
         }
     </style>
@@ -33,38 +82,38 @@
         $tecnologias = ["HTML","CSS","PHP","Docker","WordPress","Spopify"];
     
         ?>
-    <nav>
-        <div>
-            <div>
+    <nav class="alinear space-between">
+        <div class="contenidoAbajo">
+            <div class="cuadradoAzul cuadradoIconoPropieades">
                 <i class="fa-solid fa-layer-group"></i>
             </div>
             <div>
-                <h1>Panell intern de projectes</h1>
-                <p>Agència digital · Gestió de projectes d'estudí</p>
+                <h1 class="margin-0">Panell intern de projectes</h1>
+                <p class="colorletrafloja margin-0">Agència digital · Gestió de projectes d'estudí</p>
             </div>
         </div>
-        <div>
-            <div>
-                <i class="fa-solid fa-house-chimney"></i>
-                <p>Inici</p>
+        <div class="alinear">
+            <div class="colorletrafloja cuadrados-navegador">
+                <i class="fa-solid fa-house-chimney "></i>
+                <p class="margin-0">Inici</p>
             </div>
-            <div>
-                <i class="fa-solid fa-list"></i>
-                <p>Projectes</p>
+            <div class=" colorletrafloja cuadrados-navegador">
+                <i class="fa-solid fa-list "></i>
+                <p class="margin-0">Projectes</p>
             </div>
-            <div>
+            <div class="colorletrafloja cuadrados-navegador">
                 <i class="fa-solid fa-layer-group"></i>
-                <p>Tecnologies</p>
+                <p class="margin-0">Tecnologies</p>
             </div>
-            <div>
+            <div class="colorletrafloja cuadrados-navegador">
                 <i class="fa-solid fa-circle-info"></i>
-                <p>Aobre</p>
+                <p class="margin-0">Aobre</p>
             </div>
         </div>
     </nav>
     <main>
-        <div>
-            <div>
+        <div class="contendorPadre">
+            <div class="">
                 <div>
                     <i class="fa-regular fa-folder-closed"></i>
                 </div>
