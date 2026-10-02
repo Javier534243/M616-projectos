@@ -276,7 +276,7 @@
                     </div>
                     <div class="separador alinear gap-20px">
                         <div class="cuadrados-iconos background-colorAzul tamayo-icono-normales">
-                            <i></i>
+                            <i class="'.$iconosProjectos[$i].'"></i>
                         </div>
                         <div>
                             <div>Tipo: '.$tipoProjecto[$i].'</div>
