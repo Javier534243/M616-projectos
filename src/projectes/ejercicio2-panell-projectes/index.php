@@ -44,6 +44,11 @@
             display: flex;
             align-items: center
         }
+        .aliniear-haciaArriba {
+            display: flex;
+            align-items: start;
+            gap: 20px;
+        }
 
         .space-between {
             justify-content: space-between;
@@ -70,6 +75,41 @@
             display: flex;
             align-items: center;
             gap: 30px;
+        }
+
+        .background-colorPrimero {
+            background-color: #EBF4FD;
+        }
+        .background-ColorIconoAzul {
+            background-color: #D4E8FE
+        }
+        .background-colorSegundo {
+            background-color: #FDEEF1;
+        }
+        .background-ColorIconosRojo {
+            background-color: #FDD4D7;
+        }
+        .background-colorTercero {
+            background-color: #EBF9F1;
+        }
+        .background-colorVerde {
+            background-color: #D3F6E2;
+        }
+        .background-colorCuarto {
+            background-color: #F2EFFE;
+        }
+        .background-colorAzul {
+            background-color: #E1D9FE;
+        }
+
+        .cuadrados-iconos {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            padding: 10px;
         }
     </style>
 </head>
@@ -113,8 +153,8 @@
     </nav>
     <main>
         <div class="contendorPadre">
-            <div class="">
-                <div>
+            <div class="cuadradoIconoPropieades aliniear-haciaArriba background-colorPrimero">
+                <div class="background-ColorIconoAzul cuadrados-iconos">
                     <i class="fa-regular fa-folder-closed"></i>
                 </div>
                 <div>
@@ -123,8 +163,8 @@
                     <p>Projectes reigstrats al panell</p>
                 </div>
             </div>
-            <div>
-                <div>
+            <div class="cuadradoIconoPropieades aliniear-haciaArriba background-colorSegundo">
+                <div class="background-ColorIconosRojo cuadrados-iconos">
                     <i class="fa-solid fa-triangle-exclamation"></i>
                 </div>
                 <div>
@@ -133,8 +173,8 @@
                     <p>Projectes reigstrats Prioridad alta</p>
                 </div>
             </div>
-            <div>
-                <div>
+            <div class="cuadradoIconoPropieades aliniear-haciaArriba background-colorTercero">
+                <div class="background-colorVerde cuadrados-iconos">
                     <i class="fa-regular fa-clock"></i>
                 </div>
                 <div>
@@ -143,8 +183,8 @@
                     <p>Suma total de horas del projecto</p>
                 </div>
             </div>
-            <div>
-                <div>
+            <div class="cuadradoIconoPropieades aliniear-haciaArriba background-colorCuarto">
+                <div class="background-colorAzul cuadrados-iconos">
                     <i class="fa-solid fa-code"></i>
                 </div>
                 <div>
