@@ -6,6 +6,9 @@
     <title>Panell de projectes</title>
     <script src="https://kit.fontawesome.com/b51cd60f76.js" crossorigin="anonymous"></script>
     <style>
+        body {
+            background: linear-gradient(#fff, #f3f3f3);
+        }
         .margin-0 {
             margin: 0;
         }
@@ -38,9 +41,17 @@
 
         }
         .contenedor {
-            border: 2px solid #000a;
-            border-radius: 20px;
-            padding: 20px;
+            border: 1px solid #aaaa;
+            border-radius: 10px;
+            padding: 20px; 
+        }
+
+        .background-color-footer {
+            background-color: #F2F8FE;
+        }
+
+        .background-color-white {
+            background-color: #fff;
         }
 
         .alinear {
@@ -73,6 +84,9 @@
         .gap-20px {
             gap: 20px;
         }
+        .gap-10px {
+            gap: 10px;
+        }
 
         .contenidoAbajo {
             display: flex;
@@ -83,6 +97,14 @@
         .background-ColorIconoAzulMedio {
             background-color: #D4E8FE;
             color: #3162ad;
+        }
+
+        .color-Azul-iconos {
+            color: #3162ad;
+        }
+
+        .color-rojo-icono {
+            color: #dc3e3e;
         }
 
         .background-colorPrimero {
@@ -118,14 +140,26 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 20px;
-            height: 20px;
             border-radius: 10px;
             padding: 10px;
         }
 
+        .tamayo-icono-principales {
+            width: 40px;
+            height: 40px;
+        }
+
+        .tamayo-icono-normales {
+            width: 20px;
+            height: 20px;
+        }
+
         .iconos-grandes {
             font-size: 1.4rem
+        }
+
+        .iconos-principales {
+            font-size: 1.8rem
         }
 
         .separador {
@@ -146,6 +180,7 @@
         $horesEstimades = [6,4,3,5,2,4,8,3];
         $prioridad = [7,5,2,8,4,3,9,6];
         $tecnologias = ["HTML","CSS","PHP","Docker","WordPress","Spopify"];
+        $iconosProjectos = ["fa-solid fa-tooth","fa-solid fa-cart-shopping","fa-regular fa-file-lines","fa-solid fa-mobile","fa-solid fa-bullhorn","fa-regular fa-image","fa-solid fa-gear","fa-solid fa-bag-shopping"];
     
         ?>
     <nav class="alinear space-between">
@@ -180,8 +215,8 @@
     <main>
         <div class="contendorPadre">
             <div class="cuadradoIconoPropieades aliniear-haciaArriba background-colorPrimero">
-                <div class="background-ColorIconoAzul cuadrados-iconos">
-                    <i class="fa-regular fa-folder-closed iconos-grandes"></i>
+                <div class="background-ColorIconoAzul cuadrados-iconos tamayo-icono-principales">
+                    <i class="fa-regular fa-folder-closed iconos-principales"></i>
                 </div>
                 <div>
                     <div></div>
@@ -190,8 +225,8 @@
                 </div>
             </div>
             <div class="cuadradoIconoPropieades aliniear-haciaArriba background-colorSegundo">
-                <div class="background-ColorIconosRojo cuadrados-iconos">
-                    <i class="fa-solid fa-triangle-exclamation iconos-grandes"></i>
+                <div class="background-ColorIconosRojo cuadrados-iconos tamayo-icono-principales">
+                    <i class="fa-solid fa-triangle-exclamation iconos-principales"></i>
                 </div>
                 <div>
                     <div></div>
@@ -200,8 +235,8 @@
                 </div>
             </div>
             <div class="cuadradoIconoPropieades aliniear-haciaArriba background-colorTercero">
-                <div class="background-colorVerde cuadrados-iconos">
-                    <i class="fa-regular fa-clock iconos-grandes"></i>
+                <div class="background-colorVerde cuadrados-iconos tamayo-icono-principales">
+                    <i class="fa-regular fa-clock iconos-principales"></i>
                 </div>
                 <div>
                     <div> h</div>
@@ -210,8 +245,8 @@
                 </div>
             </div>
             <div class="cuadradoIconoPropieades aliniear-haciaArriba background-colorCuarto">
-                <div class="background-colorAzul cuadrados-iconos">
-                    <i class="fa-solid fa-code iconos-grandes"></i>
+                <div class="background-colorAzul cuadrados-iconos tamayo-icono-principales">
+                    <i class="fa-solid fa-code iconos-principales"></i>
                 </div>
                 <div>
                     <div></div>
@@ -234,26 +269,26 @@
 
         <div class="contendorPadre separador">
         <?php for($i = 0; $i <= 7;$i++): ?>
-            <?= '<div class="contenedor">
-                    <div>
+            <?= '<div class="contenedor background-color-white">
+                    <div class="alinear gap-20px space-between">
                         <div>#'.($i +1).'</div>
-                        <div>'.$nombreProjecto[$i].'</div>
+                        <h3 class="margin-0">'.$nombreProjecto[$i].'</h3>
                     </div>
-                    <div>
-                        <div>
+                    <div class="separador alinear gap-20px">
+                        <div class="cuadrados-iconos background-colorAzul tamayo-icono-normales">
                             <i></i>
                         </div>
                         <div>
                             <div>Tipo: '.$tipoProjecto[$i].'</div>
-                            <div>'.$nombreProjecto[$i].'</div>
+                            <div class="colorletrafloja">'.$nombreProjecto[$i].'</div>
                         </div>
                     </div>
                     <div class="contenidoAbajo">
-                        <div>
+                        <div class="alinear gap-10px">
                             <i class="fa-regular fa-clock"></i>
                             <div>'.$horesEstimades[$i].' h </div>
                         </div>
-                        <div>
+                        <div class="alinear gap-10px">
                             <i class="fa-solid fa-signal"></i>
                             <div> Prioridad: '.$prioridad[$i].'/10</div>
                         </div>
@@ -263,9 +298,9 @@
         </div>
     </main>
     <footer class="separador contendorPadre">
-        <div>
+        <div class="contenedor background-color-footer">
             <div class="alinear gap-20px">
-                <div class="cuadrados-iconos background-ColorIconoAzulMedio">
+                <div class="cuadrados-iconos background-ColorIconoAzulMedio tamayo-icono-normales">
                     <i class="fa-solid fa-signal"></i>
                 </div>
                 <div>
@@ -276,7 +311,7 @@
             <div class="contendorPadre">
                 <div class="alinear gap-20px">
                     <div>
-                        <i class="fa-regular fa-folder-closed"></i>
+                        <i class="fa-regular fa-folder-closed color-Azul-iconos iconos-grandes"></i>
                     </div>
                     <div>
                         <div>
@@ -287,7 +322,7 @@
                 </div>
                 <div class="alinear gap-20px">
                     <div>
-                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <i class="fa-solid fa-triangle-exclamation color-rojo-icono iconos-grandes"></i>
                     </div>
                     <div>
                         <div>
@@ -298,7 +333,7 @@
                 </div>
                 <div class="alinear gap-20px">
                     <div>
-                        <i class="fa-regular fa-clock"></i>
+                        <i class="fa-regular fa-clock color-Azul-iconos iconos-grandes"></i>
                     </div>
                     <div>
                         <div>
@@ -309,7 +344,7 @@
                 </div>
                 <div class="alinear gap-20px">
                     <div>
-                        <i class="fa-solid fa-globe"></i>
+                        <i class="fa-solid fa-globe color-Azul-iconos iconos-grandes"></i>
                     </div>
                     <div>
                         <div>
@@ -320,9 +355,9 @@
                 </div>
             </div>
         </div>
-        <div>
+        <div class="contenedor background-color-footer">
             <div class="alinear gap-20px">
-                <div class="cuadrados-iconos background-colorAzul">
+                <div class="cuadrados-iconos background-colorAzul tamayo-icono-normales">
                     <i class="fa-solid fa-code"></i>
                 </div>
                 <div>
