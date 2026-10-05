@@ -1,0 +1,72 @@
+body {
+    font-family: sans-serif;
+}
+
+.azul {
+    color: #48e;
+    background-color: #9dc3f2;
+}
+
+.amarillo {
+    color: #2c2c1b;
+    background-color: #e4df4d;
+}
+
+.azulCeleste {
+    color: #123d3f;
+    background-color: #40d3db;
+}
+
+.verde {
+    color: #123f13;
+    background-color: #41da43;
+}
+
+.lila {
+    color: #371f34;
+    background-color: #95558d;
+}
+
+.rojo {
+    color: #3f1a12;
+    background-color: #c27d6e;
+}
+
+.titulo {
+    margin: 0;
+}
+
+.containerMain {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cuadradoMain {
+    width: 320px;
+}
+
+.contenidoMain {
+    border: 1px solid #aaa;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.imagenes {
+    width: 100%;
+}
+
+.tecnolgias-rectangulo-main {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.contenidoAbajo {
+    display: flex;
+    gap: 10px;
+    padding: 5px;
+}
