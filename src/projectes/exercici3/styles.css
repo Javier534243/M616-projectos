@@ -2,6 +2,11 @@ body {
     font-family: sans-serif;
 }
 
+.listas-propiedades {
+    padding: 10px;
+    border-radius: 10px;
+}
+
 .azul {
     color: #48e;
     background-color: #9dc3f2;
@@ -43,8 +48,9 @@ body {
     justify-content: center;
 }
 
-.cuadradoMain {
-    width: 320px;
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .contenidoMain {
@@ -57,12 +63,30 @@ body {
     width: 100%;
 }
 
+.flex-propiedades {
+    flex: 1 1 300px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.padding-laterales {
+    padding-inline: 20px;
+}
+
 .tecnolgias-rectangulo-main {
     display: flex;
     gap: 20px;
     padding: 10px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+
+.quitarPunto {
+    list-style: none;
 }
 
 .contenidoAbajo {
