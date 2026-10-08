@@ -1,10 +1,33 @@
 body {
     font-family: sans-serif;
+    margin: 0;
+}
+
+nav {
+    background-color: #22292a;
+    color: #fff;
+}
+
+header {
+    background-color: #f3ecf3;
+}
+
+.color-negro {
+    color: #fff;
+    background-color: #111;
 }
 
 .listas-propiedades {
     padding: 10px;
     border-radius: 10px;
+}
+
+.padding0 {
+    padding: 0;
+}
+
+.width-5px {
+    width: 5px;
 }
 
 .azul {
@@ -37,6 +60,11 @@ body {
     background-color: #c27d6e;
 }
 
+.rosaFlojo {
+    color: #5f0658;
+    background-color: #dfb1dd;
+}
+
 .titulo {
     margin: 0;
 }
@@ -65,6 +93,17 @@ body {
 
 .flex-propiedades {
     flex: 1 1 300px;
+}
+
+.centar-centro  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.propiedadesTextoHeader {
+    width: 300px;
 }
 
 .nav {
