@@ -13,138 +13,188 @@
             [
                 "icono" => "fa-brands fa-php",
                 "asignatura" => "PHP",
-                "titulos" => "Variables",
+                "titulos" => ["Variables","If / else"],
                 "color" => "azul",
                 "imagen" => "imagen0",
-                "texto" => "Serveixen per guardar informació que després podem utilizar.",
-            ],
-            [
-                "icono" => "fa-brands fa-php",
-                "asignatura" => "PHP",
-                "titulos" => "If / else",
-                "color" => "azul",
-                "imagen" => "imagen1",
-                "texto" => "Permet executar un codi o un altre segons una condició.",
+                "texto" => ["Serveixen per guardar informació que després podem utilizar.","Permet executar un codi o un altre segons una condició."],
+                "numeroConceptos" => 2,
+                "destacado" => [true,true],
             ],
             [
                 "icono" => "fa-brands fa-js",
                 "asignatura" => "JavaScript",
-                "titulos" => "Manipular el DOM",
+                "titulos" => ["Manipular el DOM","Array i forEach"],
                 "color" => "amarillo",
                 "imagen" => "imagen2",
-                "texto" => "Permet modificar el contigut de la pàgina des de JavaScript."
-            ],
-            [
-                "icono" => "fa-brands fa-js",
-                "asignatura" => "JavaScript",
-                "titulos" => "Array i forEach",
-                "color" => "amarillo",
-                "imagen" => "imagen3",
-                "texto" => "Permet recórrer tots els elements d'un array."
+                "texto" => ["Permet modificar el contigut de la pàgina des de JavaScript.","Permet recórrer tots els elements d'un array."],
+                "numeroConceptos" => 2,
+                "destacado" => [true,false],
             ],
             [
                 "icono" => "fa-brands fa-react",
                 "asignatura" => "React",
-                "titulos" => "Components",
+                "titulos" => ["Components"],
                 "color" => "azulCeleste",
                 "imagen" => "imagen4",
-                "texto" => "Permeten dividr la interficie en peces reutilizables."
+                "texto" => ["Permeten dividr la interficie en peces reutilizables."],
+                "numeroConceptos" => 1,
+                "destacado" => [true],
             ],
             [
                 "icono" => "fa-regular fa-file",
                 "asignatura" => "HTML/CSS",
-                "titulos" => "Estructura HTML5",
+                "titulos" => ["Estructura HTML5"],
                 "color" => "verde",
                 "imagen" => "imagen5",
-                "texto" => "Utilizem etiquetes semàtiques per organizar el contigut."
+                "texto" => ["Utilizem etiquetes semàtiques per organizar el contigut."],
+                "numeroConceptos" => 1,
+                "destacado" => [false],
             ],
             [
                 "icono" => "fa-brands fa-docker",
                 "asignatura" => "Docker",
-                "titulos" => "Docker compose",
+                "titulos" => ["Docker compose"],
                 "color" => "lila",
                 "imagen" => "imagen6",
-                "texto" => "Permet aixecar diverses serveis alhora (per exemple, una web i una base de dades)."
+                "texto" => ["Permet aixecar diverses serveis alhora (per exemple, una web i una base de dades."],
+                "numeroConceptos" => 1,
+                "destacado" => [true],
             ],
             [
                 "icono" => "fa-solid fa-database",
                 "asignatura" => "BBDD",
-                "titulos" => "Consultes SQL bàsiques",
+                "titulos" => ["Consultes SQL bàsiques"],
                 "color" => "rojo",
                 "imagen" => "imagen7",
-                "texto" => "Permeten obtenir informació de la base de dades."
+                "texto" => ["Permeten obtenir informació de la base de dades."],
+                "numeroConceptos" => 1,
+                "destacado" => [true],
+            ],
+            [
+                "asignatura" => "Projectos",
+                "color" => "rosaFlojo",
+                "numeroConceptos" => 0,
             ],
         ];
-        // $asiganturas = ["PHP","JavaScript","React","HTML/CSS","Docker","BBDD","Projectes"];
-        // $titulos = ["Variables","If / else","Manipular el DOM","Array i forEach","Components","Estructura HTML5","Docker compose","Consultes SQL bàsiques"];
-        // $color = ["azul","amarillo","azulCeleste","verde","lila","rojo","rosa"];
-        // $imagenes = ["imagen0","imagen1","imagen2","imagen3","imagen4","imagen5","imagen6","imagen7"];
-        // $textos = ["Serveixen per guardar informació que després podem utilizar.","Permet executar un codi o un altre segons una condició.","Permet modificar el contigut de la pàgina des de JavaScript.","Permet recórrer tots els elements d'un array.","Permeten dividr la interficie en peces reutilizables.","Utilizem etiquetes semàtiques per organizar el contigut.","Permet aixecar diverses serveis alhora (per exemple, una web i una base de dades).","Permeten obtenir informació de la base de dades."];
-        // $conceptosDestacados = ["Variables PHP","If / else","Manipular el DOM","Components en REACT","Consultar dades amb SQL"];
     ?>
-    <nav>
-        <div>
+    <nav class="nav padding-laterales">
+        <div class="contenidoAbajo">
             <i class="fa-solid fa-code"></i>
             <div>Chuleta DAW2</div>
         </div>
         <div>
-            <ul>
+            <ul class="contenidoAbajo quitarPunto">
                 <li>Inici</li>
                 <li>Conceptes</li>
                 <li>Resum</li>
             </ul>
         </div>
     </nav>
-    <header>
+    <header class="padding-laterales nav">
         <div>
             <h1>Chuleta digital DAW2</h1>
             <p>Els conceptes clau del curs, en un sol lloc.</p>
         </div>
-        <div>
+        <div class="propiedadesTextoHeader">
             <div>
                 <i></i>
                 <p>Una pàgina per repassar de manera ràpida el que hem après a DAW2. Feta per estudiar, no per copiar.</p>
             </div>
         </div>
     </header>
-    <main>
-        <div>
-            <ul>
-                <li>Totes</li>
-                <?php 
+    <main class="padding-laterales">
+        <div class="flex-wrap">
+            <ul class="contenidoAbajo flex-wrap quitarPunto">
+                <li class="listas-propiedades color-negro">Totes</li>
+                <?php foreach($conceptes as $a): ?>
                     
-                ?>
+                    <li class="<?= $a['color'] ?> listas-propiedades">
+                        <?= $a['asignatura'] ?>
+                    </li>
+                <?php endforeach; ?>
             </ul>
         </div>
         <div class="containerMain">
 
            <?php foreach($conceptes as $c): ?>
-
-            <div class="cuadradoMain">
-                <div class="<?= $c['color'] ?> tecnolgias-rectangulo-main">
-                    <i class="<?= $c['icono'] ?>"></i>
-                    <div>
-                        <?= $c['asignatura'] ?>
+                <?php for($i = 0;$i < $c['numeroConceptos'];$i++): ?>
+                    <div class="flex-propiedades">
+                        <div class="<?= $c['color'] ?> tecnolgias-rectangulo-main">
+                            <i class="<?= $c['icono'] ?>"></i>
+                            <div>
+                                <?= $c['asignatura'] ?>
+                            </div>
+                        </div>
+                        <div class="contenidoMain">
+                            <div>
+                                <h2 class="titulo"><?= $c['titulos'][$i] ?></h2>
+                                <p><?= $c['texto'][$i]?></p>
+                                <img class="imagenes" src="img/<?= $c['imagen']?>.png" alt="imagen de codigo">
+                            </div>
+                            <div class="contenidoAbajo">
+                                <i class="<?= $c['icono'] ?> <?= $c['color'] ?>"></i>
+                                <div><?= $c['asignatura'] ?></div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="contenidoMain">
-                    <div>
-                        <h2 class="titulo"><?= $c['titulos'] ?></h2>
-                        <p><?= $c['texto']?></p>
-                        <img class="imagenes" src="img/<?= $c['imagen']?>.png" alt="imagen de codigo">
-                    </div>
-                    <div class="contenidoAbajo">
-                        <i class="<?= $c['icono'] ?>"></i>
-                        <div><?= $c['asignatura'] ?></div>
-                    </div>
-                </div>
-            </div>
                 
-                
+                <?php endfor; ?>
 
             <?php endforeach; ?>
 
         </div>
     </main>
+    <footer class="containerMain">
+        <div class="contenidoAbajo contenidoMain">
+            <div>
+                <h3>Resum de conceptes</h3>
+                <ul>
+                <?php foreach($conceptes as $c): ?>
+                    <ul class="quitarPunto contenidoAbajo nav">
+                        <li>
+                            <div class="<?= $c['color'] ?>  listas-propiedades width-5px"></div>
+                        </li>
+                        <li>
+                            <?= $c['asignatura'] ?>
+                        </li>
+                        <li>
+                            <?= $c['numeroConceptos'] ?>
+                        </li>
+                    </ul>
+                <?php endforeach; ?>
+                </ul>
+            </div>
+            <div class="centar-centro">
+                <p>Total de conceptos</p>
+                <?php $totalConceptos = 0 ?>
+                <?php foreach($conceptes as $c): ?>
+                    <?php $totalConceptos += $c['numeroConceptos'] ?>
+                <?php endforeach; ?>
+                <div><?= $totalConceptos ?></div>
+            </div>
+        </div>
+        <div class="contenidoMain">
+            <h3>Asignaturas</h3>
+            <ul class="contenidoAbajo quitarPunto flex-wrap">
+                <?php foreach($conceptes as $a): ?>
+                    <li class="<?= $a['color'] ?> listas-propiedades">
+                        <?= $a['asignatura'] ?>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+        <div class="contenidoMain">
+            <h3>Conceptos destacados</h3>
+            <ul>
+                <?php foreach($conceptes as $c): ?>
+                    <?php for($i = 0;$i < $c['numeroConceptos'];$i++): ?>
+                        <?php if($c['destacado'][$i] == true): ?>
+                            <li><?= $c['titulos'][$i] ?></li>
+                        <?php endif; ?>
+                    <?php endfor; ?>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>
