@@ -1,6 +1,6 @@
 <?php
     if ($_SERVER['REQUEST_METHOD'] === "POST"){
-        if($_POST['username'] == "Javier" && $_POST['selecionadorDificultad'] != "") {
+        if($_POST['username'] == "j" && $_POST['selecionadorDificultad'] != "") {
             header('Location: joc.php');
             exit;
         }else{
